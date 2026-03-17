@@ -1,138 +1,164 @@
 # 🏭 Supply Chain Tracker
 
-A full-stack Supply Chain Management System built to support infrastructure and operations workflows.
+A full-stack Supply Chain Management System built for Infrastructure Team.
 
 ![Java](https://img.shields.io/badge/Java-17-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.2-green)
 ![React](https://img.shields.io/badge/React-18-blue)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 📋 Overview
 
-Supply Chain Tracker is a full-stack web application designed to help teams manage and monitor core supply chain operations in one centralized system. The application provides visibility into vendors, warehouses, inventory, and shipments, along with dashboard insights to support better operational decision-making.
-
-It was built to reflect real-world business application needs such as:
-- supplier and vendor management
-- warehouse capacity tracking
-- inventory stock monitoring
-- shipment status visibility
-- operational alerts and dashboard reporting
-
----
-
-## 🎯 Why I Built This
-
-I built this project to deepen my understanding of how internal business applications support supply chain and operational workflows. As I became more interested in Application Engineer roles focused on enterprise systems, I wanted to create a practical end-to-end solution that demonstrates backend system design, API development, database integration, and a user-friendly frontend experience.
-
----
-
-## 💼 Business Problems Solved
-
-This application addresses common operational challenges such as:
-
-- Lack of centralized visibility across vendors, warehouses, inventory, and shipments
-- Difficulty identifying low-stock inventory before it impacts operations
-- Limited tracking of delayed or active shipments
-- Poor warehouse capacity monitoring
-- Need for dashboard-based insights for faster decisions
-
----
+Supply Chain Tracker is a comprehensive web application that enables real-time tracking and management of:
+- **Vendors** - Supplier management
+- **Warehouses** - Storage facility tracking
+- **Inventory** - Stock level monitoring
+- **Shipments** - Delivery tracking
 
 ## 🚀 Features
 
-### Backend (Spring Boot + PostgreSQL)
-- ✅ RESTful APIs for core supply chain workflows
-- ✅ Layered architecture with Controller, Service, Repository, DTO, and Exception handling
-- ✅ PostgreSQL integration for persistent relational data storage
-- ✅ Data validation and input handling
-- ✅ Global exception handling
-- ✅ Modular backend design for maintainability and scalability
+### Backend (Spring Boot)
+- ✅ RESTful API with 49+ endpoints
+- ✅ JPA/Hibernate with H2 and Postgres Database
+- ✅ Global Exception Handling
+- ✅ Data Validation
+- ✅ DTO Pattern Implementation
 
 ### Frontend (React)
-- ✅ Interactive dashboard with KPI cards and charts
-- ✅ CRUD operations for all major entities
-- ✅ Search and filter functionality
-- ✅ Toast notifications for user actions
-- ✅ Responsive UI for a better user experience
-- ✅ Clean navigation across modules
-
----
+- ✅ Modern Dashboard with Charts
+- ✅ Real-time Data Updates
+- ✅ CRUD Operations for all entities
+- ✅ Toast Notifications
+- ✅ Responsive Design
+- ✅ Search and Filter functionality
 
 ## 🛠️ Tech Stack
 
 ### Backend
 | Technology | Purpose |
 |------------|---------|
-| Java 17 | Core programming language |
-| Spring Boot | Backend application framework |
-| Spring Data JPA | ORM and data access |
-| PostgreSQL | Relational database |
-| Lombok | Reduce boilerplate code |
-| Maven | Dependency and build management |
+| Java 17 | Programming Language |
+| Spring Boot 4.0.2 | Application Framework |
+| Spring Data JPA | Database Access |
+| H2 Database | In-memory Database |
+| Lombok | Reduce Boilerplate |
+| Maven | Build Tool |
 
 ### Frontend
 | Technology | Purpose |
 |------------|---------|
-| React 18 | Frontend UI development |
-| React Router | Client-side routing |
-| Axios | API communication |
-| Recharts | Data visualization |
+| React 18 | UI Framework |
+| React Router | Navigation |
+| Axios | API Calls |
+| Recharts | Data Visualization |
 | Lucide React | Icons |
 | React Toastify | Notifications |
 
----
-
-## 🏗️ Architecture
-
-The application follows a layered architecture:
-
-- **Controller Layer**: Exposes REST API endpoints
-- **Service Layer**: Contains business logic
-- **Repository Layer**: Handles database interaction using Spring Data JPA
-- **DTO Layer**: Manages request/response objects
-- **Exception Layer**: Centralized error handling
-- **Frontend Layer**: React-based user interface for operations and dashboards
-
----
-
-## 📦 Core Modules
-
-### 1. Vendors
-Manage supplier information and maintain vendor records.
-
-### 2. Warehouses
-Track warehouse capacity and monitor storage usage.
-
-### 3. Inventory
-Monitor stock levels, identify low-stock items, and manage inventory records.
-
-### 4. Shipments
-Track shipment status, active deliveries, and delayed shipments.
-
-### 5. Dashboard
-Provide a summarized operational view using metrics, alerts, and charts.
-
----
-
 ## 📁 Project Structure
-
-```text
+```
 Supply Chain Tracker/
-├── backend/
-│   ├── src/main/java/com/google/supplychain/
-│   │   ├── controller/
-│   │   ├── service/
-│   │   ├── repository/
-│   │   ├── model/
-│   │   ├── dto/
-│   │   └── exception/
+├── Supply-Chain-Tracker/          # Backend (Spring Boot)
+│   ├── src/main/java/
+│   │   └── com/google/supplychain/
+│   │       ├── controller/        # REST Controllers
+│   │       ├── service/           # Business Logic
+│   │       ├── repository/        # Data Access
+│   │       ├── model/             # Entity Classes
+│   │       ├── dto/               # Data Transfer Objects
+│   │       └── exception/         # Exception Handling
 │   └── src/main/resources/
 │       └── application.properties
 │
-└── frontend/
+└── frontend/                       # Frontend (React)
     ├── src/
-    │   ├── components/
-    │   ├── services/
+    │   ├── components/            # React Components
+    │   ├── services/              # API Services
     │   └── App.js
     └── package.json
+```
+
+## 🏃‍♂️ Running the Application
+
+### Prerequisites
+- Java 17+
+- Node.js 16+
+- Maven 3.8+
+
+### Backend
+```bash
+cd Supply-Chain-Tracker
+mvn spring-boot:run
+```
+Backend runs on: `http://localhost:8081`
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm start
+```
+Frontend runs on: `http://localhost:3000`
+
+## 📊 API Endpoints
+
+### Vendors
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/vendors | Get all vendors |
+| GET | /api/vendors/{id} | Get vendor by ID |
+| POST | /api/vendors | Create vendor |
+| PUT | /api/vendors/{id} | Update vendor |
+| DELETE | /api/vendors/{id} | Delete vendor |
+
+### Warehouses
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/warehouses | Get all warehouses |
+| GET | /api/warehouses/nearly-full | Get warehouses >90% capacity |
+| POST | /api/warehouses | Create warehouse |
+| PUT | /api/warehouses/{id} | Update warehouse |
+| DELETE | /api/warehouses/{id} | Delete warehouse |
+
+### Inventory
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/inventory | Get all items |
+| GET | /api/inventory/low-stock | Get low stock items |
+| POST | /api/inventory | Create item |
+| PATCH | /api/inventory/{id}/add-stock | Add stock |
+| DELETE | /api/inventory/{id} | Delete item |
+
+### Shipments
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/shipments | Get all shipments |
+| GET | /api/shipments/active | Get active shipments |
+| GET | /api/shipments/delayed | Get delayed shipments |
+| POST | /api/shipments | Create shipment |
+| PATCH | /api/shipments/{id}/status | Update status |
+
+### Dashboard
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/dashboard | Get dashboard summary |
+
+## 📸 Screenshots
+
+### Dashboard
+- KPI Cards showing real-time metrics
+- Interactive charts for inventory and shipments
+- Alert notifications for low stock and delays
+
+### Vendors Management
+- Card-based vendor display
+- Add/Edit/Delete functionality
+- Search and filter options
+
+## 👨‍💻 Author
+
+**Gnaneswar Markat**
+- Application Engineer project
+
+## 📄 License
+
+This project is licensed under the MIT License.
