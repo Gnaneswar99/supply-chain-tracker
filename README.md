@@ -1,6 +1,6 @@
 # 🏭 Supply Chain Tracker
 
-A full-stack Supply Chain Management System built for any company Infrastructure Team.
+A full-stack Supply Chain Management System built for Infrastructure Team.
 
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.2-green)
@@ -157,8 +157,7 @@ Frontend runs on: `http://localhost:3000`
 ## 👨‍💻 Author
 
 **Gnaneswar Markat**
-- Built for Application Engineer project
--
+- Application Engineer project
 
 ## 📄 License
 
