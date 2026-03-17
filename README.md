@@ -1,6 +1,6 @@
 # 🏭 Supply Chain Tracker
 
-A full-stack Supply Chain Management System built for Google Infrastructure Team interview demonstration.
+A full-stack Supply Chain Management System built for any company Infrastructure Team.
 
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.2-green)
@@ -156,9 +156,9 @@ Frontend runs on: `http://localhost:3000`
 
 ## 👨‍💻 Author
 
-**Your Name**
-- Built for Google Application Engineer Interview
-- Supply Chain Systems Role
+**Gnaneswar Markat**
+- Built for Application Engineer project
+-
 
 ## 📄 License
 
